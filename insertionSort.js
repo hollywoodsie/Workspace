@@ -8,8 +8,14 @@ function insertionSort(inputArr) {
             while ((j > -1) && (current < inputArr[j])) {
                 inputArr[j+1] = inputArr[j];
                 j--;
+                console.log(j)
             }
             inputArr[j+1] = current;
+            
         }
     return inputArr;
 }
+
+var unsortedArray = [4,3,1,5,2]
+
+console.log(insertionSort(unsortedArray))
