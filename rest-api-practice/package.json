@@ -1,5 +1,19 @@
 {
   "dependencies": {
     "axios": "^0.27.2"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  },
+  "name": "rest-api-practice",
+  "version": "1.0.0",
+  "main": "rest-api-practice.js",
+  "scripts": {
+    "start": "node rest-api-practice.js",
+    "dev": "nodemon rest-api-practice.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
