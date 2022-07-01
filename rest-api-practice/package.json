@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.18"
@@ -8,6 +10,7 @@
   "name": "rest-api-practice",
   "version": "1.0.0",
   "main": "rest-api-practice.js",
+  "type": "module",
   "scripts": {
     "start": "node rest-api-practice.js",
     "dev": "nodemon rest-api-practice.js"
