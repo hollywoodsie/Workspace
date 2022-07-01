@@ -1,39 +1,22 @@
-const http = require('http');
+import express, { response } from 'express';
+import mongoose from 'mongoose';
+import router from './router.js';
+const PORT = 5000;
 
-const port = process.env.PORT || 3000;
+const DB_URL =
+  'mongodb+srv://user:user@cluster0.w4dre.mongodb.net/?retryWrites=true&w=majority';
 
-const axios = require('axios');
+const app = express();
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('<h1>Hello, World</h1>');
-});
-
-server.listen(port, () => {
-  console.log(`Server running at port ${port}`);
-});
-
-//GET req
-// axios
-//   .get('https://example.com/todos')
-//   .then((res) => {
-//     console.log(`statusCode : ${res.status}`);
-//     console.log(res);
-//   })
-//   .catch((error) => {
-//     console.error(error);
-//   });
-
-//POST req
-axios
-  .post('https://whatever.com/todos', {
-    todo: 'Learn some stuff',
-  })
-  .then((res) => {
-    console.log(`statusCode : ${res.statusCode}`);
-    console.log(res);
-  })
-  .catch((error) => {
+app.use(express.json());
+app.use('/api', router);
+async function startApp() {
+  try {
+    await mongoose.connect(DB_URL);
+    app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+  } catch (error) {
     console.error(error);
-  });
+  }
+}
+
+startApp();
