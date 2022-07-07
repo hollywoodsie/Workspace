@@ -1,0 +1,33 @@
+{
+  "editor.fontLigatures": true,
+  "explorer.confirmDelete": false,
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.enablePreview": false,
+  "extension.snippetSearch": true,
+  "auto-rename-tag.activationOnLanguage": [
+    "html"
+  ],
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnPaste": true,
+  "emmet.triggerExpansionOnTab": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.windowsEnableConpty": false,
+  "terminal.integrated.inheritEnv": true,
+  "terminal.integrated.allowChords": false,
+  "editor.tabSize": 2,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "prettier.singleQuote": true,
+  "editor.fontSize": 17,
+  "editor.fontFamily": "'Hack', 'Courier New', monospace",
+  "workbench.colorTheme": "Electron Highlighter",
+  "editor.guides.bracketPairs": true,
+  "terminal.integrated.fontSize": 17,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
